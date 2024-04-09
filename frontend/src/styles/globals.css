@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background-image: radial-gradient(
+    circle farthest-side at 50% 100%,rgba(1, 9, 18, 0),
+    rgba(1, 6, 14, 0.6) 36%,
+    rgba(1, 14, 29, 0.6) 55%,
+    rgba(49, 18, 93, 0.4)); */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* example: override wallet button style */
+.wallet-adapter-button:not([disabled]):hover {
+  background-color: #1e3a8a;
+}
+
+/* For webkit-based browsers */
+::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bae6fd; /* color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1d4ed8; /* color of the scrollbar handle */
+  border-radius: 6px; /* border radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a; /* color of the scrollbar handle on hover */
+}
+
+.bullet-container::before {
+  content: "• ";
+  color: #1e3a8a; /* Adjust color as needed */
+  font-size: 1em; /* Adjust size as needed */
+ }
+
+ .page-container {
+  position: relative;
+  min-height: 100vh; /* Ensures the container covers the full viewport height */
+ }
+ 
+ .button-container {
+  position: absolute;
+  right: 20px; /* Adjust as needed */
+  bottom: 20px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  background-color: blue; /* Hard blue color */
+  border-radius: 5px; /* Smooth rectangle shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+ }
+ 
+ .button-container:hover {
+  transform: scale(1.05); /* Scales the button on hover */
+ }
+ 
+ .learn-more-button {
+  background: none;
+  border: none;
+  color: white; /* Text color */
+  cursor: pointer;
+  font-size: 16px; /* Adjust as needed */
+ }
+
+ .marker {
+  position: absolute;
+  top: 0;
+  width: 2px; /* Width of the marker */
+  height: 100%; /* Height of the marker */
+  background-color: black; /* Color of the marker */
+}
+
+.w-full {
+  position: relative;
+  /* Other styles */
+}
+
+.milestone-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px; /* Adjust padding to make the button tiny */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 10px; /* Small font size */
+  position: absolute;
+  z-index: 1; /* Ensure the button is above the marker */
+  width: auto; /* Adjust width as needed */
+  height: 2px; /* Adjust height as needed */
+}
+
+.milestone-button:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  left: 2px;
+  right: 5px;
+  bottom: 8px;
+  border: 10px solid #000000; /* White background */
+  border-radius: 5px;
+}
